@@ -49,6 +49,7 @@ table {
 
 * {
     box-sizing: border-box;
+    max-width: 100%;
 }
 
 html, body {
@@ -121,6 +122,17 @@ nav a:hover {
     margin-bottom: 2%;
 }
 
+@media (max-width: 500px){
+	.top-content {
+        flex-direction: column;
+        margin: 3% 3%;
+	}
+
+    .top-content .text-container {
+        width: 100%;
+    }
+}
+
 .middle-content {
     margin-bottom: 20px;
     border-bottom: 1px dashed black;
@@ -147,6 +159,13 @@ nav a:hover {
     align-items: center;
     justify-content: center;
 }
+
+@media (max-width: 500px){
+	.middle-content .boxes .box {
+		width: 40%;
+	}
+}
+
 /* Box colors */
 .middle-content .boxes .one {
     background: teal;
@@ -179,6 +198,8 @@ nav a:hover {
     background: dodgerblue;
 }
 
+
+
 .bottom-content {
     display: flex;
     margin: 0 2% 20px;
@@ -191,6 +212,18 @@ nav a:hover {
 
 .bottom-content .text-container:last-child {
     padding-right: 0;
+}
+
+@media (max-width: 500px){
+	.bottom-content {
+        flex-direction: column;
+        margin: 3% 3%;
+	}
+
+    .bottom-content .text-container {
+        width: 100%;
+        margin-bottom: 3%;
+    }
 }
 
 footer {
