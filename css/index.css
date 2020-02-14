@@ -116,6 +116,11 @@ nav a:hover {
     padding-bottom: 20px;  
 }
 
+.top-content .about-container {
+    padding: 0 1%;
+    margin-bottom: 2%;
+}
+
 .middle-content {
     margin-bottom: 20px;
     border-bottom: 1px dashed black;
@@ -206,4 +211,51 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+/* About Section Styles */
+
+section.cards {
+	display:flex;
+	flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 4%;
+}
+
+section.cards div {
+	width: 45%;
+	margin: 1% 0;
+    padding: 2%;
+    border-bottom: 1px dashed black;
+}
+
+section.cards div img{
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+section.cards button {
+	padding: 2% 6%;
+	border-radius: 5px;
+	border: 2px solid black;
+	background: white;
+}
+
+@media (max-width: 500px){
+	section.cards {
+		flex-direction: column;
+	}
+
+	section.cards div{
+		width: 100%;
+	}
+}
+
+section.cards button:hover {
+	color: white;
+	background: #a19f9e;
+}
+
+section.cards p {
+	margin-bottom: 4%;
 }
