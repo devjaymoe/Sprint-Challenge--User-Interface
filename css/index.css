@@ -49,6 +49,7 @@ table {
 
 * {
     box-sizing: border-box;
+    max-width: 100%;
 }
 
 html, body {
@@ -62,6 +63,10 @@ h1, h2, h3, h4, h5 {
     font-family: 'Rubik', sans-serif;
 }
 
+h2 {
+    font-weight: 600;
+}
+
 p {
     line-height: 1.4;
 }
@@ -71,11 +76,38 @@ p {
     margin: 0 auto;
 }
 
+/* Navbar Styles */
+
+nav {
+    margin: 3% 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav .links {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+nav a {
+    font-size: smaller;
+    text-decoration: none;
+    color: black
+}
+
+nav a:hover {
+    color: gray;
+}
+
+/* Top Content Styles */
+
 .top-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-bottom: 20px;
+    margin: 3% 0;
     border-bottom: 1px dashed black;
 }
 
@@ -83,6 +115,22 @@ p {
     width: 48%;
     padding: 0 1%;
     padding-bottom: 20px;  
+}
+
+.top-content .about-container {
+    padding: 0 1%;
+    margin-bottom: 2%;
+}
+
+@media (max-width: 500px){
+	.top-content {
+        flex-direction: column;
+        margin: 3% 3%;
+	}
+
+    .top-content .text-container {
+        width: 100%;
+    }
 }
 
 .middle-content {
@@ -112,6 +160,46 @@ p {
     justify-content: center;
 }
 
+@media (max-width: 500px){
+	.middle-content .boxes .box {
+		width: 40%;
+	}
+}
+
+/* Box colors */
+.middle-content .boxes .one {
+    background: teal;
+}
+.middle-content .boxes .two {
+    background: gold;
+}
+.middle-content .boxes .three {
+    background: cadetblue;
+}
+.middle-content .boxes .four {
+    background: coral;
+}
+.middle-content .boxes .five {
+    background: crimson;
+}
+.middle-content .boxes .six {
+    background: forestgreen;
+}
+.middle-content .boxes .seven {
+    background: darkorchid;
+}
+.middle-content .boxes .eight {
+    background: hotpink;
+}
+.middle-content .boxes .nine {
+    background: indigo;
+}
+.middle-content .boxes .ten {
+    background: dodgerblue;
+}
+
+
+
 .bottom-content {
     display: flex;
     margin: 0 2% 20px;
@@ -126,6 +214,18 @@ p {
     padding-right: 0;
 }
 
+@media (max-width: 500px){
+	.bottom-content {
+        flex-direction: column;
+        margin: 3% 3%;
+	}
+
+    .bottom-content .text-container {
+        width: 100%;
+        margin-bottom: 3%;
+    }
+}
+
 footer {
     width: 100%;
     background: black;
@@ -138,9 +238,57 @@ footer nav {
     align-items: center;
     padding: 20px 2%;
     font-size: 14px;
+    margin-bottom: 0;
 }
 
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+/* About Section Styles */
+
+section.cards {
+	display:flex;
+	flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 4%;
+}
+
+section.cards div {
+	width: 45%;
+	margin: 1% 0;
+    padding: 2%;
+    border-bottom: 1px dashed black;
+}
+
+section.cards div img{
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+section.cards button {
+	padding: 2% 6%;
+	border-radius: 5px;
+	border: 2px solid black;
+	background: white;
+}
+
+@media (max-width: 500px){
+	section.cards {
+		flex-direction: column;
+	}
+
+	section.cards div{
+		width: 100%;
+	}
+}
+
+section.cards button:hover {
+	color: white;
+	background: #a19f9e;
+}
+
+section.cards p {
+	margin-bottom: 4%;
 }
